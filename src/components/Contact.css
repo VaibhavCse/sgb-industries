@@ -1,0 +1,157 @@
+/* Light Mode Variables */
+:root {
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --primary-color: #4a90e2;
+  --container-background-color: #fff; /* Light mode container background */
+  --border-color: #ddd;
+  --input-background-color: #fff;
+  --button-background-color: #4a90e2;
+  --button-hover-color: #357ABD;
+  --button-text-color: #fff;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #f5f5f5;
+  --primary-color: #66b3ff; /* Slightly lighter color for dark mode */
+  --container-background-color: #2a2a2a; /* Darker gray for inner container in dark mode */
+  --border-color: #555;
+  --input-background-color: #444;
+  --button-background-color: #357ABD;
+  --button-hover-color: #4a90e2;
+  --button-text-color: #fff;
+}
+
+/* General Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 60px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: var(--container-background-color); /* Dynamic based on the mode */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Social Links */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: var(--input-background-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  background-color: var(--button-hover-color);
+  color: var(--button-text-color);
+}
+
+/* Address Styling */
+.address {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  background-color: var(--input-background-color);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.send-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+}
+
+.p_message {
+  color: #555;
+  transition: color 0.3s;
+}
+
+body.dark-mode .p_message {
+  color: #aaa;
+}

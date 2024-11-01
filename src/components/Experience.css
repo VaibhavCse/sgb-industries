@@ -1,0 +1,98 @@
+/* Base styling for the experience section */
+.management-team {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 1.8em;
+  color: #007bff; /* Title color for light mode */
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.team-content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.member-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.member-description {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Dark mode styling */
+body.dark .management-team {
+  background-color: #1c1c1c;
+}
+
+body.dark .section-title {
+  color: #66b3ff; /* Light blue color for dark mode */
+}
+
+body.dark .team-member {
+  background-color: #333;
+  color: #ddd;
+}
+
+body.dark .member-name {
+  color: #fff;
+}
+
+body.dark .member-description {
+  color: #ccc;
+}
+
+/* Dark mode adjustments for photo shadow */
+body.dark .member-photo {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .team-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-member {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
