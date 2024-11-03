@@ -11,18 +11,22 @@ import sugar from './sugar.jpeg'
 import poha from './poha.jpg'
 import besan from './gram_flour.jpeg'
 import soya from './soyabean_oil.avif'
-import cotton_seeds from './cotton_seeds.jpeg'
+import cotton_seeds from './cotton_seeds.jpg'
+import sunflower from './sunflower_oil.jpg'
+import groundnut from './groundnut_oil.avif'
+import palm from './palm_oil.avif'
+
 
 const Projects = () => {
   const projects = [
     {
       title: 'Wheat',
-      description: 'High-grade wheat selected for its purity and quality, suitable for a wide range of applications including flour milling, food production, and animal feed. SGB Industries ensures a steady supply of premium wheat, meeting the standards of customers worldwide.',
+      description: 'High-grade wheat selected for its purity and quality, suitable for a wide range of applications including flour milling, food production, and animal feed. We ensures a steady supply of premium wheat, meeting the standards of customers.',
       image: wheat, // Image URL
     },
     {
       title: 'Wheat Flour',
-      description: 'Finely milled wheat flour crafted to deliver excellent texture and flavor, perfect for baking, cooking, and industrial food production. SGB Industries provides high-quality wheat flour that meets rigorous standards, ensuring consistency and satisfaction for our global customers.',
+      description: 'Finely milled wheat flour crafted to deliver excellent texture and flavor, perfect for baking, cooking, and industrial food production. SGB Industries provides high-quality wheat flour that meets rigorous standards, ensuring consistency and satisfaction for our customers.',
       image: w_flour,
     },
     {
@@ -71,9 +75,24 @@ const Projects = () => {
       image: soya,
     },
     {
-      title: 'Cotton Seed',
+      title: 'Cotton Seed Oil',
       description: 'Premium-quality cottonseed oil, known for its light flavor and high smoke point, making it ideal for frying, baking, and salad dressings. SGB Industries provides refined cottonseed oil that meets stringent quality standards, appealing to health-conscious consumers and food manufacturers seeking versatile cooking oils.',
       image: cotton_seeds,
+    },
+    {
+      title: 'Sunflower Oil',
+      description: 'Premium-quality sunflower oil, celebrated for its mild flavor and high smoke point, making it perfect for frying, sautéing, and creating light salad dressings. SGB Industries offers refined sunflower oil that adheres to rigorous quality standards, catering to health-conscious individuals and food manufacturers in search of a versatile and heart-healthy cooking oil.',
+      image: sunflower,
+    },
+    {
+      title: 'Groundnut Oil',
+      description: 'Premium-quality groundnut oil, prized for its rich, nutty flavor and high smoke point, is ideal for frying, sautéing, and marinades. SGB Industries provides refined groundnut oil that meets rigorous quality standards, catering to health-conscious consumers and food producers seeking a flavorful, versatile cooking oil.',
+      image: groundnut,
+    },
+    {
+      title: 'Palm Oil',
+      description: 'Premium-quality palm oil, known for its mild taste and exceptional heat stability, is ideal for frying, baking, and various processed foods. SGB Industries offers refined palm oil that meets strict quality standards, making it a preferred choice for health-conscious consumers and manufacturers seeking a versatile and long-lasting cooking oil.',
+      image: palm,
     },
   ];
 

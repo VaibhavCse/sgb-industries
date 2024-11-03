@@ -54,6 +54,44 @@
   line-height: 1.5;
 }
 
+/* Styling for Our Firms section */
+.our-firms-heading {
+  width: 100%;
+  text-align: left;
+  margin: 40px 0 20px;
+}
+
+.our-firms-heading .section-title {
+  font-size: 1.8em;
+  color: #007bff;
+}
+
+.firm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.firm-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.firm-description {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+}
+
 /* Dark mode styling */
 body.dark .management-team {
   background-color: #1c1c1c;
@@ -63,21 +101,24 @@ body.dark .section-title {
   color: #66b3ff; /* Light blue color for dark mode */
 }
 
-body.dark .team-member {
+body.dark .team-member,
+body.dark .firm {
   background-color: #333;
   color: #ddd;
 }
 
-body.dark .member-name {
+body.dark .member-name,
+body.dark .firm-name {
   color: #fff;
 }
 
-body.dark .member-description {
+body.dark .member-description,
+body.dark .firm-description {
   color: #ccc;
 }
 
-/* Dark mode adjustments for photo shadow */
-body.dark .member-photo {
+body.dark .member-photo,
+body.dark .firm-photo {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
@@ -87,12 +128,20 @@ body.dark .member-photo {
     text-align: center;
     margin-bottom: 20px;
   }
-  .team-content {
+
+  .team-content,
+  .firm-content {
     flex-direction: column;
     align-items: center;
   }
-  .team-member {
+
+  .team-member,
+  .firm {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .our-firms-heading {
+    text-align: center;
   }
 }

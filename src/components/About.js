@@ -12,17 +12,20 @@ const About = () => {
         <div className="about-right">
           <h2>About Us</h2>
           <p>
-          <strong>Shree Ganesh Besan Industries (SGB Industries)</strong> is a trusted name in the manufacturing, export, and distribution of premium agricultural products. With deep roots in the industry, our expertise extends beyond besan (gram flour) to include a diverse range of high-quality food staples such as rice, wheat, and other essential grains, serving both domestic and international markets.
+          <strong>Shree Ganesh Besan Industries</strong> is a trusted name in the manufacturing, export, and distribution of premium agricultural products. With deep roots in the industry, our expertise extends beyond besan (gram flour) to include a diverse range of high-quality food staples such as rice, wheat, wheat four, sugar, pulses, food oils and other essential grains, serving both domestic and in national markets.
           </p>
           <p>
-           Delivering in <strong>Banswara, Partapur, Sagwara, Ghatol, Pipalkhunt, Kushalgarh, Sajjangarh, Aaspur, Anandpuri</strong> and <strong>nearby villages located within 50km</strong>.
+          For Domestic market - Delivering on daily basis in <strong>Banswara, Partapur, Sagwara, Ghatol, Pipalkhunt, Kushalgarh, Sajjangarh, Aaspur, Anandpuri</strong> and nearby villages located within 50km.
           </p> 
           <p>
-            Driven by a commitment to excellence, SGB Industries prides itself on delivering unmatched quality, consistency, and value. Our dedicated management and operations teams ensure that each product meets stringent quality standards, making us a preferred partner for clients worldwide.
+          For Bulk Orders delivery other then domestic supply it depends on the coustomer and company requirements.
           </p>
           <p>
-            At SGB Industries, our mission is to provide superior products at competitive prices, fostering enduring relationships with our customers across the globe. With years of experience and a commitment to sustainable practices, we look forward to continuing our legacy of quality and trust in the agricultural sector.
-          </p>                
+            Driven by a commitment to provide Quality, Our company prides itself on delivering unmatched quality, consistency, and value. Our dedicated management and operations teams ensure that each product meets stringent quality standards, making us a preferred partner for clients nationwide.
+          </p>
+          <p>
+           With years of experience and a commitment to sustainable practices, we look forward to continuing our legacy of quality and trust in the agricultural sector.
+          </p>               
         </div>
         <div className="about-left">
           <img src={aboutImage} alt="About Me" className="about-img" />

@@ -49,7 +49,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="logo">
           <img src={logo} alt="Logo" className="logo-image" />
-          <h1>SGB Industries</h1>
+          <h1 className="logo-text">SGB Industries</h1>
         </div>
         <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <li><Link to="home" smooth={true} duration={500} onClick={scrollToTop}>Home</Link></li>

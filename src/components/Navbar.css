@@ -28,18 +28,55 @@ body, html {
   width: 100%;
 }
 
-.logo h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #1de9b6, #00bfae);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo image and title */
+  padding-left: 10px;
 }
 
+.logo-image {
+  width: 40px; /* Adjust logo size as needed */
+  height: 40px;
+}
+
+/* Updated SGB Industries Logo Text Styling */
+.logo-text {
+  font-size: 1.7rem; /* Make it slightly larger */
+  font-weight: 500;
+  font-family: fantasy;
+  margin: 0;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, white, green );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer; /* Adds a pointer cursor to make it look clickable */
+}
+
+/* Hover effect for added emphasis */
+.logo-text:hover {
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 0px 0px 15px rgba(255, 165, 0, 0.6);
+  transform: scale(1.05); /* Slight scaling on hover for emphasis */
+}
+
+/* Optional: Add a subtle animation effect */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 165, 0, 0.4);
+  }
+  50% {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.8);
+  }
+}
+
+.logo-text:hover {
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Nav Links Styling */
 .nav-links {
   list-style: none;
   display: flex;
@@ -139,32 +176,6 @@ body {
   transform: rotate(360deg);  
 }
 
-/* Adjust Logo Styling */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Space between logo image and title */
-  padding-left: 10px;
-}
-
-.logo-image {
-  width: 40px; /* Adjust logo size as needed */
-  height: 40px;
-}
-
-.logo h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #1de9b6, #00bfae);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
 .theme-toggle {
   margin-right: 20px; /* Adjust margin to shift toggle button to the left */
 }
-
