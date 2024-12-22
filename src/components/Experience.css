@@ -1,4 +1,4 @@
-/* Base styling for the experience section */
+/* Base styling for the AI Package section */
 .management-team {
   max-width: 1200px;
   margin: 0 auto;
@@ -6,90 +6,98 @@
 }
 
 .section-title {
-  font-size: 1.8em;
+  font-size: 2em; /* Adjust font size for emphasis */
   color: #007bff; /* Title color for light mode */
-  text-align: left;
-  margin-bottom: 20px;
+  text-align: center; /* Center-align the title */
+  margin-bottom: 40px; /* Add space between title and content */
+  font-weight: bold; /* Make the title bold */
 }
 
+/* Ensure dark mode alignment */
+body.dark .section-title {
+  color: #66b3ff; /* Light blue color for dark mode */
+}
+
+
+
+/* Container for the cards */
 .team-content {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  margin-top: 20px;
 }
 
-.team-member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 48%;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.member-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-}
-
-.member-name {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.member-description {
-  font-size: 0.95em;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* Styling for Our Firms section */
-.our-firms-heading {
-  width: 100%;
-  text-align: left;
-  margin: 40px 0 20px;
-}
-
-.our-firms-heading .section-title {
-  font-size: 1.8em;
-  color: #007bff;
-}
-
+/* Card styling */
 .firm {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
+  background-color: #fff;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 48%;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 30%; /* Ensures three tiles fit in one row */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid transparent; /* For header color indicator */
 }
 
+.firm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card header styling */
 .firm-name {
   font-size: 1.2em;
   font-weight: bold;
-  color: #333;
   margin-bottom: 10px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
 }
 
+/* Individual card header colors */
+.firm:nth-child(1) .firm-name {
+  background-color: #004080; /* Blue */
+}
+
+.firm:nth-child(2) .firm-name {
+  background-color: #007bff; /* Light Blue */
+}
+
+.firm:nth-child(3) .firm-name {
+  background-color: #ff6600; /* Orange */
+}
+
+.firm:nth-child(4) .firm-name {
+  background-color: #32a852; /* Green */
+}
+
+.firm:nth-child(5) .firm-name {
+  background-color: #8e44ad; /* Purple */
+}
+
+/* Card content styling */
 .firm-description {
   font-size: 0.95em;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .firm {
+    width: 45%; /* Two tiles per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .firm {
+    width: 100%; /* One tile per row for small screens */
+  }
 }
 
 /* Dark mode styling */
@@ -98,50 +106,18 @@ body.dark .management-team {
 }
 
 body.dark .section-title {
-  color: #66b3ff; /* Light blue color for dark mode */
+  color: #66b3ff; /* Light blue for title in dark mode */
 }
 
-body.dark .team-member,
 body.dark .firm {
   background-color: #333;
   color: #ddd;
 }
 
-body.dark .member-name,
 body.dark .firm-name {
   color: #fff;
 }
 
-body.dark .member-description,
 body.dark .firm-description {
   color: #ccc;
-}
-
-body.dark .member-photo,
-body.dark .firm-photo {
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .section-title {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .team-content,
-  .firm-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .team-member,
-  .firm {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .our-firms-heading {
-    text-align: center;
-  }
 }

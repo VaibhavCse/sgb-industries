@@ -41,8 +41,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 100px 20px;
-  padding-top: 80px; /* Adjust this value based on your navbar height */
+ margin-top: auto;
   /* Optionally, add some padding-bottom for better spacing */
   padding-bottom: 50px; 
 }

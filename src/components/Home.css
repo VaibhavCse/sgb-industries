@@ -1,8 +1,17 @@
+/* Resetting margins and paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 /* Full-page background styling */
 .home-section {
   min-height: 100vh;                   /* Full viewport height */
   height: 100vh;                       /* Ensures full height on all devices */
-  background-image: url('./front_image3.avif'); /* Replace with your image path */
+  background-image: url('./concept-cyber-server-cloud-data-storage-cloudscape-digital-online-rack-service-global-network-database-backup-computer-safety-infrastructure-technology.jpg'); /* Replace with your image path */
   background-size: cover;              /* Ensures the image covers the whole section */
   background-position: center;         /* Centers the image */
   background-repeat: no-repeat;        /* Prevents image repetition */
@@ -10,37 +19,39 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
+}
+
+/* Overlay background styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+  z-index: 1;
 }
 
 /* Overlay text styling */
 .overlay-text {
-  position: absolute;
+  position: relative;
   text-align: center;
   color: white;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent dark overlay */
+  z-index: 2; /* Ensures it is above the overlay */
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .overlay-text h1 {
   font-size: 2.5rem;
   margin: 0;
-}
-
-.overlay-text p {
-  font-size: 1.2rem;
-  margin: 10px 0 0;
+  font-family: 'Arial', sans-serif; /* Optional: Update font style */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for better readability */
 }
 
 /* Responsive styling */
 @media (max-width: 768px) {
   .overlay-text h1 {
     font-size: 1.8rem;
-  }
-
-  .overlay-text p {
-    font-size: 1rem;
   }
 }

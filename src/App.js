@@ -1,26 +1,24 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Security from './components/security';
 import About from './components/About';
-import Projects from './components/Projects';
+import AppExchange from './components/AppExchange';
 import Contact from './components/Contact';
-import './App.css';
 import Experience from './components/Experience';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Home />
-        <About />
-        <Projects />
-        <Experience />
-        <Contact />
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar />
+      <section id="home"><Home /></section>
+      <section id="projects"><Security /></section>
+      <section id="about"><About /></section>
+      <section id="experience"><Experience /></section>
+      <section id="appexchange"><AppExchange /></section>
+      <section id="contact"><Contact /></section>
+    </div>
   );
 }
 

@@ -1,0 +1,96 @@
+/* Base styling for the experience section */
+.management-team {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 2em;
+    color: #007bff; /* Title color for light mode */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .section-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .team-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .firm {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(48% - 20px); /* Adjust for spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .firm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .firm-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .firm-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Dark mode styling */
+  body.dark .management-team {
+    background-color: #1c1c1c;
+  }
+  
+  body.dark .section-title {
+    color: #66b3ff; /* Light blue color for dark mode */
+  }
+  
+  body.dark .firm {
+    background-color: #333;
+    color: #ddd;
+  }
+  
+  body.dark .firm-name {
+    color: #fff;
+  }
+  
+  body.dark .firm-description {
+    color: #ccc;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .section-title {
+      text-align: center;
+    }
+  
+    .team-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .firm {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

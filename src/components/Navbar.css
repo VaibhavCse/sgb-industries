@@ -18,6 +18,7 @@ body, html {
   align-items: center;
   padding: 15px 30px;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -34,35 +35,35 @@ body, html {
   align-items: center;
   gap: 10px; /* Space between logo image and title */
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .logo-image {
-  width: 40px; /* Adjust logo size as needed */
+  width: 40px;
   height: 40px;
 }
 
-/* Updated SGB Industries Logo Text Styling */
 .logo-text {
-  font-size: 1.7rem; /* Make it slightly larger */
+  font-size: 1.7rem;
   font-weight: 500;
   font-family: fantasy;
   margin: 0;
   letter-spacing: 2px;
-  background: linear-gradient(90deg, white, green );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #FFD700, #8A2BE2);
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* Vendor-prefixed property for WebKit browsers */
+  -webkit-text-fill-color: transparent; /* Required for the gradient to show */
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  cursor: pointer; /* Adds a pointer cursor to make it look clickable */
 }
 
-/* Hover effect for added emphasis */
+
 .logo-text:hover {
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 0px 0px 15px rgba(255, 165, 0, 0.6);
-  transform: scale(1.05); /* Slight scaling on hover for emphasis */
+  transform: scale(1.05);
+  animation: glow 1.5s infinite alternate;
 }
 
-/* Optional: Add a subtle animation effect */
 @keyframes glow {
   0%, 100% {
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 165, 0, 0.4);
@@ -72,15 +73,13 @@ body, html {
   }
 }
 
-.logo-text:hover {
-  animation: glow 1.5s infinite alternate;
-}
-
 /* Nav Links Styling */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
@@ -92,11 +91,13 @@ body, html {
   text-decoration: none;
   font-size: 1rem;
   padding: 10px;
-  transition: color 0.3s ease;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: var(--navbar-hover-text);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile Menu Styles */
@@ -110,8 +111,8 @@ body, html {
     background-color: var(--navbar-bg);
     width: 100%;
     text-align: center;
-    transition: all 0.3s ease;
-    z-index: 2000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
   }
 
   .nav-links.active {
@@ -126,7 +127,8 @@ body, html {
     display: block;
     cursor: pointer;
     font-size: 2rem;
-    color: whitesmoke;
+    color: var(--navbar-text);
+    transition: color 0.3s ease;
   }
 
   .theme-toggle {
@@ -161,6 +163,7 @@ body {
   color: black !important;
 }
 
+/* Theme Button */
 .theme-button {
   background: none;
   border: none;
@@ -177,5 +180,5 @@ body {
 }
 
 .theme-toggle {
-  margin-right: 20px; /* Adjust margin to shift toggle button to the left */
+  margin-right: 20px;
 }

@@ -1,0 +1,182 @@
+/* Light Theme (default) */
+.projects-section {
+    padding: 50px 0;
+    background-color: var(--background-color);  /* Light background for light mode */
+    color: #333;  /* Dark text for light mode */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transitions */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .projectheading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff; /* Blue color for heading */
+    margin-bottom: 30px;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 0 20px; /* Padding to prevent content from touching edges */
+  }
+  
+  .project-card {
+    background-color: #fff;  /* White background for cards in light mode */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center; /* Centered text */
+    position: relative;
+    z-index: 2; /* Ensure it’s clickable */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+  
+  p {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .stack-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  
+  .stack-item {
+    background-color: #ececec;  /* Light background for stack items */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  
+  /* Ensure link is clickable and styled */
+  .project-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 3; /* Ensure link is above everything */
+  }
+  
+  .project-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);  /* Slight scale effect on hover */
+  }
+  
+  .project-card:hover .project-link {
+    pointer-events: all; /* Ensure it's clickable on hover */
+  }
+  
+  /* Dark Theme */
+  body.dark .projects-section {
+    background-color: var(--background-color);  /* Dark background for dark mode */
+    color: #fff;  /* Light text for dark mode */
+  }
+  
+  body.dark .project-card {
+    background-color: #1e1e1e;  /* Dark background for cards */
+    color: #ddd;  /* Light text in dark mode */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Darker shadow */
+  }
+  
+  body.dark .stack-item {
+    background-color: #333;  /* Darker background for stack items in dark mode */
+  }
+  
+  body.dark .project-link {
+    background-color: #007bff; /* Consistent link color */
+  }
+  
+  body.dark .project-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Scale on hover for dark mode */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .projects-container {
+      flex-direction: column; /* Stack projects vertically on small screens */
+      gap: 20px;
+      padding: 0 15px; /* Reduce side padding */
+    }
+  
+    .project-card {
+      max-width: 100%;
+      text-align: center; /* Center text on small screens */
+    }
+  
+    h3 {
+      font-size: 1.1rem;
+    }
+  
+    p {
+      font-size: 0.95rem;
+    }
+  
+    .project-link {
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-card {
+      padding: 15px;
+    }
+  
+    h3 {
+      font-size: 1rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    .project-link {
+      padding: 8px 12px;
+    }
+  
+    .stack-item {
+      font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
